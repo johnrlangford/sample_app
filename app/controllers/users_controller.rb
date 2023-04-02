@@ -11,6 +11,8 @@ class UsersController < ApplicationController
     @user = User.new(permit_params)
     if @user.save
       redirect_to @user
+      reset_session
+      log_in @user
       flash[:success] = "Welcome to the Sample App!"
     else
       render 'new', status: :unprocessable_entity
