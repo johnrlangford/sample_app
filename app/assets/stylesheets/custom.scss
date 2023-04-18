@@ -209,3 +209,13 @@ input {
   width: auto;
   margin-left: 0;
 }
+
+.users {
+  margin: 0;
+  list-style: none;
+  li {
+    border-bottom: 1px solid $gray-lighter;
+    overflow: auto;
+    padding: 10px 0;
+  }
+}
